@@ -116,10 +116,20 @@ for i in range(1, 21):
 # if the input is incorrect, keep asking for the correct input until it is correct
 # if the input is correct print “thank you” and break the loop
 
-name = input("What is your name? ")
+# First Version
+# name = input("What is your name? ")
+# while True: 
+#     if name.isdigit() or len(name) < 3:
+#         name = input("Please enter a valid name: ")
+#     else: 
+#         print("thank you")
+#         break
+
 while True: 
+    name = input("What is your name? ")
+
     if name.isdigit() or len(name) < 3:
-        name = input("Please enter a valid name: ")
+        print("Error: Name must be at least 3 characters long and cannot contain digits. Please try again.")
     else: 
         print("thank you")
         break
@@ -192,18 +202,43 @@ print(f"Total cost: ${total_cost:.2f}")
 # $15 for anyone over 12.
 # Print the total ticket cost.
 
+#First Draft
+# total_cost = 0
+# while True:
+#     age = input("What is your age? ")
+#     if int(age) < 3:
+#         total_cost += 0
+#     elif int(age) <= 12: 
+#         total_cost += 10
+#     else: 
+#         total_cost += 15
+#     more = input("Is there another person in the family? (yes/no) ")
+#     if more.lower() != "yes":
+#         break
+
+# print(f"The total ticket cost is: ${total_cost}")
+
 total_cost = 0
 while True:
     age = input("What is your age? ")
-    if int(age) < 3:
-        total_cost += 0
-    elif int(age) <= 12: 
-        total_cost += 10
-    else: 
-        total_cost += 15
-    more = input("Is there another person in the family? (yes/no) ")
-    if more.lower() != "yes":
-        break
+
+    try:
+        age_int = int(age)
+
+        if age_int < 3:
+            total_cost += 0
+        elif age_int <= 12: 
+            total_cost += 10
+        else: 
+            total_cost += 15
+        more = input("Is there another person in the family? (yes/no) ")
+        if more.lower() != "yes":
+            break
+    
+    except ValueError:
+        print("Invalid input. Please enter a valid age.")
+        continue
+    
 
 print(f"The total ticket cost is: ${total_cost}")
 
