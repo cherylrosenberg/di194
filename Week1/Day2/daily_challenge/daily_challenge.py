@@ -11,16 +11,26 @@
 # A number (integer).
 # A length (integer).
 
-number = int(input("Please enter a number: "))
-length = int(input("Please enter a length: "))
+while True:
+    try: 
+        number = int(input("Please enter a number: "))
+        length = int(input("Please enter a length: "))
 
-#  2. Create a program that generates a list of multiples of the given number.
-# 3. The list should stop when it reaches the length specified by the user.
+    #  2. Create a program that generates a list of multiples of the given number.
+    # 3. The list should stop when it reaches the length specified by the user.
 
-number_list = []
-for i in range(number, (number * length) +1, number):
-    number_list.append(i) 
-print(number_list)
+        number_list = []
+
+        for i in range(number, (number * length) +1, number):
+            number_list.append(i) 
+
+        print(number_list)
+        break
+
+    except ValueError:
+        print("Please enter valid integers for both inputs.")
+
+
 
 # Challenge 2: Remove Consecutive Duplicate Letters
 # Key Python Topics:
@@ -38,12 +48,13 @@ print(number_list)
 # 3. The program should print the modified string.
 
 string_input = input("Please enter a string: ")
-string_non_duplicate = ""
+string_unique_char_list = []
 last_char = ""
 
 for char in string_input:
     if char != last_char:
-        string_non_duplicate += char
+        string_unique_char_list.append(char)
     last_char = char
 
-print(string_non_duplicate)
+string_unique_char = "".join(string_unique_char_list)
+print(string_unique_char)
