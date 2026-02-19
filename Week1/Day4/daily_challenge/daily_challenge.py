@@ -175,12 +175,12 @@ def run_coffee_shop():
 def search_item(menu_dict):
     drink_name = input("What drink are you considering? ")
 
-    if drink_name in menu.keys():
+    if drink_name in menu:
         print(f"The {drink_name} costs {menu_dict[drink_name]}₪")
     else:
         print(f"{drink_name} not in the menu")
-        
-#run_coffee_shop()
+
+search_item(menu)
 
 # 3. Discount day:
 # Add a function apply_discount(menu_dict, percent) that reduces every price by a percentage.
@@ -192,7 +192,8 @@ def apply_discount(menu_dict, percent):
         menu_dict[drink] = round(discount_price,2)
     
     print(f"Discount of {percent}% applied to all items!")
-    
-apply_discount(menu,10) 
-print(menu)
+
+# run_coffee_shop() 
+# apply_discount(menu,10) 
+# print(menu)
 

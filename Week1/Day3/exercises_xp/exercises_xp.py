@@ -141,8 +141,10 @@ num_keys = len(zara_brand)
 print(num_keys)
 
 # Print all keys of the dictionary.
-for key in zara_brand:
-    print(key)
+# for key in zara_brand:
+#     print(key)
+
+print(zara_brand.keys())
 
 # Bonus:
 # Create another dictionary called more_on_zara with creation_date and number_stores. Merge this dictionary with the original brand dictionary and print the result.
