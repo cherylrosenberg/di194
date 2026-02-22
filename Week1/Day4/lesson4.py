@@ -112,5 +112,44 @@ def make_sandwich(type,*args,**kwargs):
 
 make_sandwich("cheese", "lettuce", "tomato", breadtype = "brown pita")
 
+def starts_with_A(s):
+    return s[0] == "A" #Returns True or False
 
+fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
+filtered_object = filter(starts_with_A, fruit)
 
+print(list(filtered_object))
+# >> ['Apple', 'Apricot']
+
+#### The filter function basically does this loop 
+a_fruit = [] # equivelant to filtered_object
+
+#This loop basically does what the filter function does 
+for fr in fruit:
+    if starts_with_A(fr): 
+        a_fruit.append(fr)
+
+## Map functions 
+def upper_string(s):
+    return s.upper()
+
+fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
+map_object = map(upper_string, fruit)
+
+print(list(map_object))
+## >> ['APPLE', 'BANANA', 'PEAR', 'APRICOT', 'ORANGE']
+
+## Map function equivelant of 
+# new_list = []
+# for fr in fruit: 
+#     new_list.append(upper_string(fr))
+
+## Lambda function 
+
+def upper_string(s):
+    return s.upper()
+
+fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
+map_object = map(lambda string: string.upper(), fruit)
+
+print(list(map_object))
