@@ -33,8 +33,13 @@ def find_oldest_cat(cat1, cat2, cat3):
     else:
         return cat3
     
+# Step 3: Print the Oldest Cat’s Details
+# Call the function to get the oldest cat.
+# Print a formatted string: “The oldest cat is <cat_name>, and is <cat_age> years old.”
+# Replace <cat_name> and <cat_age> with the oldest cat’s name and age.
+    
 oldest = find_oldest_cat(cat1, cat2, cat3)
-print(oldest.name, oldest.age)
+print(f"The oldest cat is {oldest.name}, and is {oldest.age} years old")
 
 # Exercise 2 : Dogs
 # Goal: Create a Dog class, instantiate objects, call methods, and compare dog sizes.

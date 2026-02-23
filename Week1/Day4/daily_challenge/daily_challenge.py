@@ -180,8 +180,6 @@ def search_item(menu_dict):
     else:
         print(f"{drink_name} not in the menu")
 
-search_item(menu)
-
 # 3. Discount day:
 # Add a function apply_discount(menu_dict, percent) that reduces every price by a percentage.
 # Example: apply_discount(menu, 10) makes 10% off happy hour.

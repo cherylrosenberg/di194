@@ -173,7 +173,7 @@ you_want_it_darker = Song([
 
 you_want_it_darker.sing_me_a_song()
 
-Exercise 4 - Zoo
+# Exercise 4 - Zoo
 
 class Zoo:
     def __init__(self, zoo_name):
