@@ -51,4 +51,10 @@ pack.add_dog(dog2)
 pack.add_dog(dog3)
 
 pack.fight_all()
+
+# IS-A means inheritance. For example, a dog IS A animal, so it inherits its attributes
+# HAS-A means composition. For example, a student HAS A classroom. It doesn't inherit the attributes of a classroom
+# composition is one class storing references to instances of another class. A Family stores a list of Person objects. A Playlist has a list of Student objects. The objects in the list are fully functional objects with their own attributes and methods. 
+
+
      
