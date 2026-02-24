@@ -22,11 +22,15 @@ letters = string.ascii_letters
 # Use a loop to select 5 random characters from the combined string.
 # Concatenate the characters to form the random string.
 
-random_string = ''
+# My original version
+# random_string = ''
 
-for _ in range(5):
-    random_char = random.choice(letters)
-    random_string += random_char
+# for _ in range(5):
+#     random_char = random.choice(letters)
+#     random_string += random_char
+
+#  More efficient version with AI Checker
+random_string = ''.join(random.choice(letters) for _ in range(5))
 
 
 print(random_string)

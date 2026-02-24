@@ -10,10 +10,10 @@
 
 import datetime as dt
 
-# Step 2: Get the current date
+def current_date():
+    # Step 2: Get the current date
+    current_date = dt.datetime.now().date()
+    # Step 3: Display the date
+    print(current_date)
 
-current_date = dt.datetime.now().date()
-
-# Step 3: Display the date
-
-print(current_date)
+current_date()
