@@ -28,6 +28,7 @@ class Currency:
         if isinstance(other, int):
             self.amount += other
             return self
+        
         if isinstance(other, Currency):
             if self.currency != other.currency:
                 raise TypeError (f"Cannot add between Currency type <{self.currency}> and <{other.currency}>")
