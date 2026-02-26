@@ -5,9 +5,8 @@ def get_words_from_file(file_path):
         content = f.read()
     return content.split()
 
-
 def get_random_sentence(length):
-    words = get_words_from_file(r"Week2\Day4\words.txt")
+    words = get_words_from_file(r"Week2\Day4\exercises\words.txt") 
     
     chosen = [random.choice(words) for _ in range(length)]
     
