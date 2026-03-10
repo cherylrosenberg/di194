@@ -45,3 +45,4 @@ stock_data = pd.DataFrame({
 
 # Displaying the first few rows of the simulated data
 print(stock_data.head())
+

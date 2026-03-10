@@ -19,4 +19,4 @@ raw = response.text
 for user in data:
     print(f"    {user['name']} - {user['email']}")
 
-print(list(data.keys()))
+# print(list(data.keys()))
